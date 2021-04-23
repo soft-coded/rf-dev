@@ -2,10 +2,10 @@
 
 @keyframes header-animation {
 	25% {
-		content: "you";
+		content: "fitness";
 	}
 	50% {
-		content: "me";
+		content: "physique";
 	}
 	75% {
 		content: "health";
@@ -44,7 +44,8 @@
 			span::before {
 				content: "RiteFood";
 				color: $secondary-1;
-				// animation: header-animation 7s linear infinite;  --- ANIMATION
+				animation: header-animation 7s linear infinite;
+				// --- ANIMATION
 			}
 		}
 

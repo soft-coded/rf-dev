@@ -1,0 +1,66 @@
+@import "../../variables.scss";
+
+.problems {
+	background-color: brown;
+	height: 100%;
+	color: $light-1;
+	display: block;
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		h1 {
+			margin: 50px 0 50px 0;
+			font-size: 2rem;
+			font-family: $font-secondary-2;
+			text-decoration: underline;
+			letter-spacing: 3px;
+		}
+	}
+
+	.boxes-container {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 100px;
+
+		.box {
+			margin: 50px 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			img {
+				width: 200px;
+				transition: all 0.3s ease-in-out;
+
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						transform: rotate(-10deg) scale(1.1);
+					}
+				}
+			}
+
+			.box-text {
+				max-width: 70%;
+
+				h3 {
+					margin: 30px 0;
+					font-size: 1.5rem;
+					font-family: $font-secondary-3;
+					letter-spacing: 2px;
+				}
+
+				h4 {
+					margin: 10px 0;
+					letter-spacing: 1px;
+				}
+
+				p {
+					color: $light-2;
+				}
+			}
+		}
+	}
+}

@@ -1,39 +1,41 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import { AnimationOnScroll as Anim } from "react-animation-on-scroll";
 
 import "./research.scss";
 import data from "../../data/research";
+import SectionHeader from "../../components/section-header/SectionHeader";
 
 export default function Research() {
 	const [index, setIndex] = useState(0);
 	const carousel = useRef<HTMLDivElement>(null);
 
-	function changeIndex(change: string) {
-		if (change === "n") {
-			carousel.current!.className =
-				"research-content animate__animated animate__fadeOutLeft";
-			setTimeout(() => {
-				setIndex(index === 2 ? 0 : index + 1);
+	const changeIndex = useCallback(
+		(change: string) => {
+			if (change === "n") {
 				carousel.current!.className =
-					"research-content animate__animated animate__fadeInRight";
-			}, 1000);
-		} else {
-			carousel.current!.className =
-				"research-content animate__animated animate__fadeOutRight";
-			setTimeout(() => {
-				setIndex(index === 0 ? 2 : index - 1);
+					"research-content animate__animated animate__fadeOutLeft";
+				setTimeout(() => {
+					setIndex(index === 2 ? 0 : index + 1);
+					carousel.current!.className =
+						"research-content animate__animated animate__fadeInRight";
+				}, 1000);
+			} else {
 				carousel.current!.className =
-					"research-content animate__animated animate__fadeInLeft";
-			}, 1000);
-		}
-	}
+					"research-content animate__animated animate__fadeOutRight";
+				setTimeout(() => {
+					setIndex(index === 0 ? 2 : index - 1);
+					carousel.current!.className =
+						"research-content animate__animated animate__fadeInLeft";
+				}, 1000);
+			}
+		},
+		[index]
+	);
 
 	return (
 		<section id="research" className="research">
 			<div className="inner">
-				<header>
-					<h1>Research Work</h1>
-				</header>
+				<SectionHeader>Research Work</SectionHeader>
 				<Anim
 					animateIn="animate__animated animate__zoomIn"
 					duration={1.5}

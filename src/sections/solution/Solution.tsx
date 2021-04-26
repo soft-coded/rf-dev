@@ -2,14 +2,13 @@ import { AnimationOnScroll as Animator } from "react-animation-on-scroll";
 
 import "./solution.scss";
 import data from "../../data/solution";
+import SectionHeader from "../../components/section-header/SectionHeader";
 
 export default function Solution() {
 	return (
 		<section id="solution" className="solution">
 			<div className="inner">
-				<header>
-					<h1>RiteFood: The Solution</h1>
-				</header>
+				<SectionHeader>RiteFood: The Solution</SectionHeader>
 				<div className="solutions-container">
 					{data.map(details => (
 						<div className="details" key={details.id}>

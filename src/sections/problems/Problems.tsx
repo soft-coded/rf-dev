@@ -2,14 +2,13 @@ import { AnimationOnScroll as Box } from "react-animation-on-scroll";
 
 import "./problems.scss";
 import data from "../../data/problems";
+import SectionHeader from "../../components/section-header/SectionHeader";
 
 export default function Problems() {
 	return (
 		<section className="problems" id="problems">
 			<div className="inner">
-				<header>
-					<h1>Problems Faced By Everyone Today</h1>
-				</header>
+				<SectionHeader>Problems Faced By Everyone Today</SectionHeader>
 				<div className="boxes-container">
 					{data.map(details => {
 						return (

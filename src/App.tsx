@@ -12,6 +12,7 @@ export default function App() {
 		<>
 			<Navbar />
 			<main>
+				<div className="backdrop"></div>
 				<Landing />
 				<Problems />
 				<Solution />

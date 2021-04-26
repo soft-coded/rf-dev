@@ -1,41 +1,45 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import "./navbar.scss";
-import logo from "../../images/logo.jpg";
+import NavbarList from "./NavbarList";
+import NavbarSideMenu from "./NavbarSideMenu";
+import vars from "../../variables";
 
 export default function Navbar() {
 	useEffect(() => {
-		document.addEventListener("scroll", () => {
-			const navbar = document.querySelector("nav")!;
-			if (window.pageYOffset > 2) navbar.classList.add("sticky");
-			else navbar.classList.remove("sticky");
-		});
+		const mediaQueryTab1 = window.matchMedia(
+			"(max-width: " + vars.tabMaxWidth1 + ")"
+		);
+		if (!mediaQueryTab1.matches) {
+			document.addEventListener("scroll", () => {
+				const navbar = document.querySelector("nav")!;
+				if (window.pageYOffset > 2) navbar.className = "sticky";
+				else navbar.className = "";
+			});
+		}
 	}, []);
 
+	function handleOpen(): void {
+		const drawer = document.querySelector<HTMLElement>(".nav-side-menu")!;
+		const backdrop = document.querySelector<HTMLElement>(".backdrop")!;
+		drawer.style.transform = "translateX(0%)";
+		backdrop.style.display = "block";
+		backdrop.style.animation = "fade-in 0.3s ease-in-out forwards";
+	}
+
 	return (
-		<nav>
-			<div className="inner">
-				<ul>
-					<a href="/" className="logo-container">
-						<img src={logo} alt="RiteFood" className="logo" />
-					</a>
-					<li>
-						<a href="#top">Home</a>
-					</li>
-					<li>
-						<a href="#problems">Problems</a>
-					</li>
-					<li>
-						<a href="#solution">Solution</a>
-					</li>
-					<li>
-						<a href="#research">Research</a>
-					</li>
-					<li>Blogs</li>
-					<li>News</li>
-					<li>Contact Us</li>
-				</ul>
-			</div>
-		</nav>
+		<>
+			<nav>
+				<div className="inner">
+					<NavbarList />
+				</div>
+			</nav>
+			<button className="side-menu-open" onClick={handleOpen}>
+				<div></div>
+				<div></div>
+				<div></div>
+			</button>
+			<NavbarSideMenu />
+		</>
 	);
 }

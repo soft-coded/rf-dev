@@ -15,8 +15,8 @@ export default function Landing() {
 						<a href="https://www.youtube.com/watch?v=jlK_bl6fPWI">
 							<span>(%) Watch Video</span>
 						</a>
-						<a href="#problems">
-							<span className="learn-more">(%) Learn More</span>
+						<a href="#problems" className="learn-more">
+							<span>(%) Learn More</span>
 						</a>
 					</div>
 				</div>

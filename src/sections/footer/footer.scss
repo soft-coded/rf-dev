@@ -5,6 +5,7 @@
 	color: $light-1;
 	display: flex;
 	flex-direction: column;
+	overflow: auto;
 
 	.socials {
 		display: flex;
@@ -15,11 +16,27 @@
 		font-size: 1.3rem;
 		letter-spacing: 2px;
 
+		@media (max-width: $mobile-width-1) {
+			font-size: 1rem;
+			flex-direction: column;
+			align-items: center;
+		}
+
 		.newsletter {
 			display: flex;
 			align-items: center;
 			margin-left: 6rem;
 			text-align: center;
+
+			@media (max-width: $mobile-width-1) {
+				margin: 20px 0;
+				font-size: 0.9rem;
+				flex-direction: column;
+
+				h4 {
+					margin-bottom: 10px;
+				}
+			}
 
 			form {
 				display: flex;
@@ -63,6 +80,14 @@
 			font-size: 0.8rem;
 		}
 
+		@media (max-width: $mobile-width-1) {
+			flex-direction: column;
+
+			.contact-details {
+				margin-bottom: 40px;
+			}
+		}
+
 		h4 {
 			margin-bottom: 10px;
 			font-size: 1.1rem;
@@ -77,9 +102,19 @@
 			color: $light-2;
 			list-style: none;
 
+			@media (max-width: $mobile-width-1) {
+				max-width: unset;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
 			li {
 				margin: 10px 0;
 				letter-spacing: 2px;
+
+				@media (max-width: $mobile-width-1) {
+					font-size: 0.75rem;
+				}
 			}
 		}
 
@@ -87,6 +122,13 @@
 			max-width: 33%;
 			color: $light-2;
 			letter-spacing: 2px;
+			color: $light-3;
+
+			@media (max-width: $mobile-width-1) {
+				margin-top: 20px;
+				font-size: 0.7rem;
+				max-width: unset;
+			}
 		}
 	}
 

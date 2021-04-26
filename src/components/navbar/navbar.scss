@@ -39,7 +39,7 @@ nav {
 			transition: all 0.2s linear;
 			transform: scale(1.2);
 
-			@media (hover: hover) and (pointer: fine) {
+			@media (hover: hover) {
 				&:hover {
 					cursor: pointer;
 					color: $primary-2;
@@ -71,10 +71,11 @@ nav {
 .side-menu-open {
 	display: none;
 	position: fixed;
-	top: 30px;
-	left: 30px;
+	top: 15px;
+	left: 20px;
 	z-index: 8;
-	background-color: purple;
+	background-color: transparent;
+	opacity: 0.8;
 	padding: 5px 10px;
 	border: none;
 	border-radius: 5px;
@@ -110,6 +111,10 @@ nav {
 
 	@media (max-width: $tablet-width-1) {
 		display: flex;
+	}
+
+	@media (max-width: $mobile-width-1) {
+		width: 50vw;
 	}
 
 	ul {

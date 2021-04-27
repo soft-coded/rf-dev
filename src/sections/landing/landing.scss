@@ -1,20 +1,8 @@
 @import "../../variables.scss";
 
-@keyframes header-animation {
-	25% {
-		content: "fitness";
-	}
-	50% {
-		content: "physique";
-	}
-	75% {
-		content: "health";
-	}
-}
-
 .landing {
 	background: {
-		color: linear-gradient(45deg, $dark-1, $dark-2);
+		color: $dark-1;
 		image: linear-gradient(90deg, $dark-1-alpha, $dark-2-alpha),
 			url("../../images/landing-bg.jpg");
 		repeat: no-repeat, no-repeat;
@@ -40,7 +28,7 @@
 			transition: all 0.3s ease-in-out;
 
 			@media (max-width: $mobile-width-1) {
-				width: 180px;
+				width: 175px;
 				padding: 10px;
 				background-color: $primary-1;
 				// color: $dark-1;
@@ -84,19 +72,31 @@
 		justify-content: center;
 
 		h1 {
-			font-family: $font-secondary-1;
-			font-size: 3rem;
+			font-family: $font-primary-7;
+			font-size: 2rem;
 			letter-spacing: 3px;
 			margin-bottom: 10px;
 
 			@media (max-width: $mobile-width-1) {
-				font-size: 2rem;
+				font-size: 1.5rem;
+				margin-bottom: 30px;
+			}
+
+			span {
+				font-size: 4rem;
+				font-family: $font-primary-4;
+				transform: translateY(40px);
+				// animation: move-span 10s linear infinite;
+
+				@media (max-width: $mobile-width-1) {
+					font-size: 3.2rem;
+				}
 			}
 
 			span::before {
 				content: "RiteFood";
 				color: $secondary-1;
-				animation: header-animation 5s linear infinite;
+				animation: header-animation 10s linear infinite;
 				// --- ANIMATION
 			}
 		}
@@ -105,10 +105,44 @@
 			color: $light-2;
 			letter-spacing: 1.5px;
 			margin-bottom: 50px;
+			font-family: $font-primary-7;
 
 			@media (max-width: $mobile-width-1) {
 				font-size: 1rem;
 			}
 		}
+	}
+}
+
+@keyframes move-span {
+	12% {
+		transform: translateY(40px);
+	}
+	25% {
+		transform: translateY(-40px);
+		transform: translateY(40px);
+	}
+	37% {
+		transform: translateY(-40px);
+		transform: translateY(40px);
+	}
+	50% {
+		transform: translateY(-40px);
+		transform: translateY(40px);
+	}
+}
+
+@keyframes header-animation {
+	12% {
+		content: "health";
+	}
+	25% {
+		content: "physique";
+	}
+	37% {
+		content: "fitness";
+	}
+	50% {
+		content: "RiteFood";
 	}
 }

@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 .footer {
-	background-color: $dark-2;
+	background-image: linear-gradient(180deg, $dark-1, $dark-2);
 	color: $light-1;
 	display: flex;
 	flex-direction: column;

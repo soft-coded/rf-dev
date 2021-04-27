@@ -3,9 +3,10 @@
 .landing {
 	background: {
 		color: $dark-1;
-		image: linear-gradient(90deg, $dark-1-alpha, $dark-2-alpha),
+		image: linear-gradient($dark-1-alpha, $dark-2-alpha),
 			url("../../images/landing-bg.jpg");
 		repeat: no-repeat, no-repeat;
+		position: center, center;
 		size: cover, cover;
 	}
 	height: 100vh;

@@ -1,7 +1,14 @@
 @import "../../variables.scss";
 
 .solution {
-	background-color: maroon;
+	background: {
+		color: $dark-1;
+		image: linear-gradient($dark-1-alpha, $dark-2-alpha),
+			url("../../images/solution-bg.jpg");
+		repeat: no-repeat, no-repeat;
+		position: center, center;
+		size: cover, cover;
+	}
 	color: $light-1;
 	padding-bottom: 100px;
 

@@ -1,7 +1,14 @@
 @import "../../variables.scss";
 
 .problems {
-	background-color: brown;
+	background: {
+		color: $dark-1;
+		image: linear-gradient(0deg, $dark-1-alpha, $dark-2-alpha),
+			url("../../images/problems-bg.jpg");
+		repeat: no-repeat, no-repeat;
+		position: center, center;
+		size: cover, cover;
+	}
 	height: 100%;
 	color: $light-1;
 	display: block;

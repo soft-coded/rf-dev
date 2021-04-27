@@ -14,9 +14,13 @@ export default function App() {
 			<main>
 				<div className="backdrop"></div>
 				<Landing />
+				<hr className="divider-1" />
 				<Problems />
+				<hr className="divider-2" />
 				<Solution />
+				<hr className="divider-1" />
 				<Research />
+				<hr className="divider-2" />
 				<Footer />
 			</main>
 		</>

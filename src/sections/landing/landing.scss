@@ -85,8 +85,6 @@
 			span {
 				font-size: 4rem;
 				font-family: $font-primary-4;
-				transform: translateY(40px);
-				// animation: move-span 10s linear infinite;
 
 				@media (max-width: $mobile-width-1) {
 					font-size: 3.2rem;
@@ -111,24 +109,6 @@
 				font-size: 1rem;
 			}
 		}
-	}
-}
-
-@keyframes move-span {
-	12% {
-		transform: translateY(40px);
-	}
-	25% {
-		transform: translateY(-40px);
-		transform: translateY(40px);
-	}
-	37% {
-		transform: translateY(-40px);
-		transform: translateY(40px);
-	}
-	50% {
-		transform: translateY(-40px);
-		transform: translateY(40px);
 	}
 }
 

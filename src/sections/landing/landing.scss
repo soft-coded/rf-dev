@@ -13,7 +13,13 @@
 }
 
 .landing {
-	background: linear-gradient(45deg, $dark-1, $dark-2);
+	background: {
+		color: linear-gradient(45deg, $dark-1, $dark-2);
+		image: linear-gradient(90deg, $dark-1-alpha, $dark-2-alpha),
+			url("../../images/landing-bg.png");
+		repeat: no-repeat, no-repeat;
+		size: cover, cover;
+	}
 	height: 100vh;
 	width: 100vw;
 
@@ -90,7 +96,7 @@
 			span::before {
 				content: "RiteFood";
 				color: $secondary-1;
-				// animation: header-animation 7s linear infinite;
+				animation: header-animation 5s linear infinite;
 				// --- ANIMATION
 			}
 		}

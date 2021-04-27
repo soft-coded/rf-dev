@@ -3,6 +3,7 @@ import { AnimationOnScroll as Animator } from "react-animation-on-scroll";
 import "./solution.scss";
 import data from "../../data/solution";
 import SectionHeader from "../../components/section-header/SectionHeader";
+import vars from "../../variables";
 
 export default function Solution() {
 	return (
@@ -15,7 +16,7 @@ export default function Solution() {
 							{details.direction === "Right" && (
 								<Animator
 									animateIn="animate__animated animate__fadeInUp"
-									duration={1.5}
+									duration={vars.animationDuration}
 									animatePreScroll={true}
 									animateOnce={true}
 								>
@@ -25,7 +26,7 @@ export default function Solution() {
 							<div className="details-text">
 								<Animator
 									animateIn="animate__animated animate__fadeIn"
-									duration={1.5}
+									duration={vars.animationDuration}
 									animatePreScroll={true}
 									animateOnce={true}
 								>
@@ -39,7 +40,7 @@ export default function Solution() {
 													details.direction
 												}
 												delay={i * 200}
-												duration={1.5}
+												duration={vars.animationDuration}
 												animatePreScroll={true}
 												animateOnce={true}
 												key={i}
@@ -52,7 +53,7 @@ export default function Solution() {
 							</div>
 							{details.direction === "Left" && (
 								<Animator
-									duration={1.5}
+									duration={vars.animationDuration}
 									animateIn="animate__animated animate__fadeInUp"
 									animatePreScroll={true}
 									animateOnce={true}

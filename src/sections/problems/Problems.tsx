@@ -3,6 +3,7 @@ import { AnimationOnScroll as Box } from "react-animation-on-scroll";
 import "./problems.scss";
 import data from "../../data/problems";
 import SectionHeader from "../../components/section-header/SectionHeader";
+import vars from "../../variables";
 
 export default function Problems() {
 	return (
@@ -16,7 +17,7 @@ export default function Problems() {
 								{details.direction === "Right" && (
 									<Box
 										animateIn="animate__animated animate__fadeInUp"
-										duration={1.5}
+										duration={vars.animationDuration}
 										animatePreScroll={true}
 										animateOnce={true}
 									>
@@ -28,7 +29,7 @@ export default function Problems() {
 										animateIn={
 											"animate__animated animate__fadeIn" + details.direction
 										}
-										duration={1.5}
+										duration={vars.animationDuration}
 										animatePreScroll={true}
 										animateOnce={true}
 									>
@@ -40,7 +41,7 @@ export default function Problems() {
 								{details.direction === "Left" && (
 									<Box
 										animateIn="animate__animated animate__fadeInUp"
-										duration={1.5}
+										duration={vars.animationDuration}
 										animatePreScroll={true}
 										animateOnce={true}
 									>

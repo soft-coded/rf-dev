@@ -4,6 +4,7 @@ import { AnimationOnScroll as Anim } from "react-animation-on-scroll";
 import "./research.scss";
 import data from "../../data/research";
 import SectionHeader from "../../components/section-header/SectionHeader";
+import vars from "../../variables";
 
 export default function Research() {
 	const [index, setIndex] = useState(0);
@@ -38,7 +39,7 @@ export default function Research() {
 				<SectionHeader>Research Work</SectionHeader>
 				<Anim
 					animateIn="animate__animated animate__zoomIn"
-					duration={1.5}
+					duration={vars.animationDuration}
 					animatePreScroll={true}
 					animateOnce={true}
 					offset={300}

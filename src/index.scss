@@ -42,9 +42,11 @@ a {
 }
 
 .divider-1 {
-	color: $secondary-1;
+	background-color: $secondary-1;
+	border: 1px solid $secondary-1;
 }
 
 .divider-2 {
-	color: $primary-1;
+	background-color: $primary-1;
+	border: 1px solid $primary-1;
 }

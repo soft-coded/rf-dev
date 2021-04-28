@@ -1,3 +1,5 @@
+import { FaFacebook, FaTwitter } from "react-icons/fa";
+
 import data from "../../data/footer";
 import "./footer.scss";
 
@@ -8,8 +10,8 @@ export default function Footer() {
 				<div className="socials">
 					<div className="follow">
 						Follow us on:
-						<i>(%)</i>
-						<i>(%)</i>
+						<FaFacebook color="blue" />
+						<FaTwitter color="lightblue" />
 					</div>
 					<div className="newsletter">
 						<h4>Our Newsletter:</h4>

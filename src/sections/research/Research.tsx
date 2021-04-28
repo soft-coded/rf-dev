@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback } from "react";
 import { AnimationOnScroll as Anim } from "react-animation-on-scroll";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 import "./research.scss";
 import data from "../../data/research";
@@ -55,7 +56,7 @@ export default function Research() {
 				>
 					<div className="carousel">
 						<span className="button left" onClick={() => changeIndex("p")}>
-							&lt;
+							<FaArrowAltCircleLeft color="orange" size={30} />
 						</span>
 						<div className="research-content animate__animated" ref={carousel}>
 							<img src={data[index].image} alt="hello" />
@@ -64,7 +65,7 @@ export default function Research() {
 							<button onClick={handleModalOpen}>Read More</button>
 						</div>
 						<span className="button right" onClick={() => changeIndex("n")}>
-							&gt;
+							<FaArrowAltCircleRight color="orange" size={30} />
 						</span>
 					</div>
 					<Modal

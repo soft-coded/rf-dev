@@ -1,4 +1,4 @@
-import React from "react";
+import { FaVideo, FaPlus } from "react-icons/fa";
 
 import "./landing.scss";
 
@@ -13,10 +13,15 @@ export default function Landing() {
 					<h3>Your healthy life begins here.</h3>
 					<div className="button-container">
 						<a href="https://www.youtube.com/watch?v=jlK_bl6fPWI">
-							<span>(%) Watch Video</span>
+							<span>
+								<FaVideo /> Watch Video
+							</span>
 						</a>
 						<a href="#problems" className="learn-more">
-							<span>(%) Learn More</span>
+							<span>
+								<FaPlus />
+								Learn More
+							</span>
 						</a>
 					</div>
 				</div>

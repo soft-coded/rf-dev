@@ -12,7 +12,8 @@ export default function App() {
 		<>
 			<Navbar />
 			<main>
-				<div className="backdrop"></div>
+				<div className="backdrop" />
+				<div id="modal-portal" />
 				<Landing />
 				<hr className="divider-1" />
 				<Problems />

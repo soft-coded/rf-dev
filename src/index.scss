@@ -12,7 +12,8 @@ html {
 }
 
 body {
-	font-family: $font-primary-6;
+	font-family: $font-primary-7;
+	line-height: 1.2rem;
 	overflow-x: hidden;
 	background-color: $dark-2;
 	background-image: linear-gradient(45deg, $dark-1, $dark-2);

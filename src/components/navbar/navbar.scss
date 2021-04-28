@@ -103,7 +103,7 @@ nav {
 	bottom: 0;
 	z-index: 9;
 	width: 33vw;
-	background-color: black;
+	background-image: linear-gradient(45deg, $dark-1, $dark-2);
 	color: $light-1;
 	padding: 30px 0;
 	transition: all 0.3s ease-in-out;
@@ -121,11 +121,17 @@ nav {
 		display: block;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
 		height: 100%;
 		list-style: none;
 
+		li {
+			margin: 20px 0;
+			font-size: 1.1rem;
+		}
+
 		.logo {
+			margin-left: 15px;
 			width: 50px;
 		}
 	}
